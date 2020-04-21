@@ -42,9 +42,33 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 **Preguntas**
 
 * ¿Qué es un Azure Function?
+
+  Azure Function es una solución para ejecutar fácilmente pequeños fragmentos de código o “funciones” en la nube. Toma los 
+  conceptos básicos de los ya conocidos WebJobs y los amplía de forma interesante.
+
 * ¿Qué es serverless?
+  
+  La computación sin servidor (o serverless para abreviar) es un modelo de ejecución en el que el proveedor en la nube 
+  (AWS,  Azure o Google Cloud) es responsable de ejecutar un fragmento de código mediante la asignación dinámica de 
+  los recursos. Y cobrando solo por la cantidad de recursos utilizados para ejecutar el código. El código, generalmente, 
+  se ejecuta dentro de contenedores sin estado que pueden ser activados por una variedad de eventos que incluyen 
+  solicitudes HTTP, eventos de base de datos, servicios de colas, alertas de monitoreo, carga de archivos, eventos 
+  programados (trabajos cron), etc. El código que se envía a al proveedor en la nube para la ejecución es generalmente en 
+  forma de una función. Por lo tanto, serverless a veces se denomina “Funciones como servicio” o “FaaS”.
+
 * ¿Qué es el runtime y que implica seleccionarlo al momento de crear el Function App?
+
+  Una Functions App se ejecuta en una versión específica  de Azure Functions runtime. Hay tres versiones principales: 
+  1.x, 2.xy 3.x. Por defecto, las Functions App se crean en la  versión 2.x de runtime.
+  
+  Azure Functions le permite segmentar una versión específica del runtime mediante el uso de la configuración de la 
+  aplicación FUNCTIONS_EXTENSION_VERSION en una Function App. La Function App se mantiene en la versión principal 
+  especificada hasta que elija explícitamente pasar a una nueva versión.
+
 * ¿Por qué es necesario crear un Storage Account de la mano de un Function App?
+
+  
+
 * ¿Cuáles son los tipos de planes para un Function App?, ¿En qué se diferencias?, mencione ventajas y desventajas de cada uno de ellos.
 * ¿Por qué la memoization falla o no funciona de forma correcta?
 * ¿Cómo funciona el sistema de facturación de las Function App?
