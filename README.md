@@ -102,7 +102,7 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
  Pero si probamos un caso más pequeo como 100 , el programa alcanza a dar resultado. Sin embargo el error de rango
  sigue presente.
   
-![](images/informe/fun-rrecurrente2.PNG)
+![](images/informe/fun-recurrente2.PNG)
 
   En conclusión, es mejor usar la implementación iterativa de la función de Fibonnaci en la Function App.
 
