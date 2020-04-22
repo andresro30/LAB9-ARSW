@@ -37,7 +37,8 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 5. Modifique la coleción de POSTMAN con NEWMAN de tal forma que pueda enviar 10 peticiones concurrentes. Verifique los resultados y presente un informe.
 
-
+  La información detallada del informe se presentará al final del documento. Esta es la imagen del archivo que añadimos a la colección de POSTMAN 
+  
 ![](images/postman.PNG)
 
 6. Cree una nueva Function que resuleva el problema de Fibonacci pero esta vez utilice un enfoque recursivo con memoization. Pruebe la función varias veces, después no haga nada por al menos 5 minutos. Pruebe la función de nuevo con los valores anteriores. ¿Cuál es el comportamiento?.
@@ -91,7 +92,37 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
   Dedicated: Permite un mayor control sobre la aplicaicon y los recursos ya sea para mantener un escalamiento grande o para abajo. Tiene cion de mantener siempre arriba. 
 
 * ¿Por qué la memoization falla o no funciona de forma correcta?
+
+  Cuando ejecutamos la función recurrente de Fibonacci se generó un error de rango, esto pasa porque se excede el límite
+  de recursión. En los casos más grandes el servidor termina la ejecución sin ni siquiera poder dar resultado de la 
+  operación como en el caso de 1.000.000
+  
+![](images/informe/fun-rrecurrente.PNG)
+
+ Pero si probamos un caso más pequeo como 100 , el programa alcanza a dar resultado. Sin embargo el error de rango
+ sigue presente.
+  
+![](images/informe/fun-rrecurrente2.PNG)
+
+  En conclusión, es mejor usar la implementación iterativa de la función de Fibonnaci en la Function App.
+
 * ¿Cómo funciona el sistema de facturación de las Function App?
 
 El sistema de facturacion esta dada por la cantidad de ejecuciones, el tiempo de ejecucion y la cantidad de memoria utilizada. 
 * Informe
+
+  El objetivo de este informe es revisar el comportamiento de la Function App al momento de realizar 10 peticiones
+  concurrentes, donde cada una tiene 10 iteraciones. 
+  
+ ![](images/informe/caso10.jpg)
+ 
+  El resultado de esta prueba es: En promedio la Function App está tardando 2.30 minutos en responder la petición y de todos 
+  los casos que se probaron, la gran mayoría tuvieron una respuesta existosa. Solo dos iteraciones fallaron por un error
+  de Getway.
+  
+  ![](images/informe/caso10-respuesta.jpg)
+  
+  Se puede concluir que la Function App está funcionando concurrentemente sin mayor inconveniente y maneja un tiempo 
+  de respuesta similar entre todas las peticiones que se están haciendo. 
+  
+  
