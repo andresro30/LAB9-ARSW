@@ -67,9 +67,25 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 * ¿Por qué es necesario crear un Storage Account de la mano de un Function App?
 
-  
+  La Storage Account de azure le permite a Function App  manejar funciones automaticas y ejecutar el almacenamiento de registros. Utiliza las funciones de Blobs, tables y queues para mantener una flexibilidad de escalamiento y una comunicacion de la aplicacion mas confiable.
 
 * ¿Cuáles son los tipos de planes para un Function App?, ¿En qué se diferencias?, mencione ventajas y desventajas de cada uno de ellos.
+
+|         Recurso         |    Consumption    |      Premium      |     Dedicated     |
+|:-----------------------:|:-----------------:|:-----------------:|:-----------------:|
+|        Scale out        | Manejador eventos | Manejador eventos | Escalamiento automatico o manual |
+| Max tamaño peticion(MB) |        100        |        100        |        100        |
+|     Max memoria(GB)     |        1.5        |      3.5 - 14     |     1.75 - 14     |
+|  Function Apps por plan |        100        |        100        |     Sin limite    |
+|      Almacenamiento     |        1GB        |       250GB       |    50 - 1000GB    |
+  Consumption: Es el plan mas economico tiene facturacion por tiempo de ejecucion, cantidad de ejecuciones y memoria usada.
+
+  Premium: Presenta mayores ventajas en cuanto a recursos, evita inicios desde 0, conexion con red virtual, prediccion de precios.
+
+  Dedicated: Permite un mayor control sobre la aplicaicon y los recursos ya sea para mantener un escalamiento grande o para abajo. Tiene cion de mantener siempre arriba. 
+
 * ¿Por qué la memoization falla o no funciona de forma correcta?
 * ¿Cómo funciona el sistema de facturación de las Function App?
+
+El sistema de facturacion esta dada por la cantidad de ejecuciones, el tiempo de ejecucion y la cantidad de memoria utilizada. 
 * Informe
