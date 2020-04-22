@@ -1,7 +1,11 @@
 {
     "files.exclude": {
         "obj": true,
-        "bin": true
+        "bin": true,
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
     },
     "azureFunctions.deploySubpath": "FunctionProject",
     "azureFunctions.postDeployTask": "npm install",
